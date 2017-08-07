@@ -33,7 +33,7 @@ class Selection extends Component {
 	}
 	constructor(props) {
 	  super(props);
-	
+
 	  this.state = {
 	  	modalVisible: false,
 	  	title: props.title,
@@ -79,6 +79,9 @@ class Selection extends Component {
     }
 
     let styles = {
+      topView: null,
+      mainBtn: null,
+      mainText: null,
     	main: {
     		width: ScreenWidth - 80,
     		marginLeft: 40,
@@ -113,8 +116,7 @@ class Selection extends Component {
     }
 
     return (
-    	<View>
-    		
+    	<View style={styles.topView}>
     		<Modal
     			visible={this.state.modalVisible}
     			onRequestClose={() =>{alert("Modal has been closed.")}}
@@ -149,11 +151,11 @@ class Selection extends Component {
     				</View>
     			</TouchableOpacity>
     		</Modal>
-    		
-    		<TouchableOpacity onPress={()=>this.openOption()}>
-				<View style={styles.main}>
-					<Text>{this.state.title}</Text>
-				</View>
+
+    		<TouchableOpacity onPress={()=>this.openOption()} style={style.mainBtn}>
+  				<View style={styles.main}>
+  					<Text style={style.mainText}>{this.state.title}</Text>
+  				</View>
 			</TouchableOpacity>
 		</View>
     );
