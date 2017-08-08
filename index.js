@@ -78,12 +78,20 @@ class Selection extends Component {
         options = [];
     }
 
+    let width = ScreenWidth - 80;
+
     let styles = {
-      topView: null,
-      mainBtn: null,
-      mainText: null,
+      topView: {
+        width: width,
+      }
+      mainBtn: {
+        width: width,
+      }
+      mainText: {
+        width: width,
+      },
     	main: {
-    		width: ScreenWidth - 80,
+    		width: width,
     		marginLeft: 40,
     		marginTop: 5,
     		marginBottom: 5,
@@ -93,14 +101,14 @@ class Selection extends Component {
     		backgroundColor: '#ffffff',
     	},
         body: {
-            width: ScreenWidth - 80,
+            width: width,
             backgroundColor: '#ffffff',
             maxHeight: ScreenHeight - 300,
             borderRadius: 5,
             overflow: 'hidden',
         },
         option: {
-            width: ScreenWidth - 80,
+            width: width,
             padding: 10,
             borderBottomWidth: 1,
             borderBottomColor: '#cccccc',
